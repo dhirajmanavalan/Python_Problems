@@ -1,14 +1,15 @@
-'''Maximum Subarray'''
+'''Simple Menu System'''
 
-def max_subarray(nums):
-    current_sum = nums[0]
-    max_sum = nums[0]
+while True:
+    print("1. Say Hello")
+    print("2. Exit")
 
-    for num in nums[1:]:
-        current_sum = max(num, current_sum + num)
-        max_sum = max(max_sum, current_sum)
+    choice = int(input("Enter choice: "))
 
-    return max_sum
-
-
-print(max_subarray([-2,1,-3,4,-1,2,1,-5,4]))
+    if choice == 1:
+        print("Hello User!")
+    elif choice == 2:
+        print("Exiting...")
+        break
+    else:
+        print("Invalid choice")

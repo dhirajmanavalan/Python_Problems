@@ -1,17 +1,11 @@
-'''Valid Parentheses'''
+'''Reverse Number'''
 
-def is_valid(s):
-    stack = []
-    mapping = {')': '(', '}': '{', ']': '['}
+num = int(input("Enter number: "))
+rev = 0
 
-    for char in s:
-        if char in mapping:
-            top = stack.pop() if stack else '#'
-            if mapping[char] != top:
-                return False
-        else:
-            stack.append(char)
+while num > 0:
+    digit = num % 10
+    rev = rev * 10 + digit
+    num //= 10
 
-    return not stack
-
-print(is_valid("()[]{}"))  # Output: True
+print("Reversed number:", rev)

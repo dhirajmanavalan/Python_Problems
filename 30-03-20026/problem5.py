@@ -1,21 +1,13 @@
-'''Longest Consecutive Sequence'''
+'''Sum of Even Numbers (1 to N)'''
 
-def longest_consecutive(nums):
-    num_set = set(nums)
-    longest = 0
+n = int(input("Enter number: "))
+total = 0
 
-    for num in num_set:
-        if num - 1 not in num_set:
-            current = num
-            length = 1
+for i in range(1, n+1):
+    if i % 2 == 0:
+        total += i
 
-            while current + 1 in num_set:
-                current += 1
-                length += 1
-
-            longest = max(longest, length)
-
-    return longest
+print("Sum of even numbers:", total)
 
 
-print(longest_consecutive([100,4,200,1,3,2]))
+

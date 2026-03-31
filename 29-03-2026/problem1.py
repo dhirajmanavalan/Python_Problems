@@ -1,20 +1,14 @@
-'''
-Longest Substring Without Repeating Characters
-'''
+balance = 1000
 
-def longest_substring(s):
-    char_set = set()
-    left = 0
-    max_length = 0
+while True:
+    amount = int(input("Enter amount to withdraw: "))
 
-    for right in range(len(s)):
-        while s[right] in char_set:
-            char_set.remove(s[left])
-            left += 1
+    if amount <= balance:
+        balance -= amount
+        print("Withdrawal Successful")
+        print("Remaining Balance:", balance)
+        break
+    else:
+        print("Insufficient Balance")
 
-        char_set.add(s[right])
-        max_length = max(max_length, right - left + 1)
-
-    return max_length
-
-print(longest_substring("abcabcbb"))  # 3
+        '''ATM Withdrawal System'''

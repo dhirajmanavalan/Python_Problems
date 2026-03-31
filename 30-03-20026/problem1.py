@@ -1,4 +1,4 @@
-'''Product of Array Except Self'''
+'''Reverse a String'''
 def product_except_self(nums):
     n = len(nums)
     result = [1] * n
