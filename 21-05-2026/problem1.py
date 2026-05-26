@@ -1,0 +1,9 @@
+# Problem 1 - Check Anagram
+
+a = "listen"
+b = "silent"
+
+if sorted(a) == sorted(b):
+    print("Anagram")
+else:
+    print("Not Anagram")
